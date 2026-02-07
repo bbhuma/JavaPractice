@@ -1,2 +1,0 @@
-# ScalerJavaPractice
-ScalerJavaPractice
