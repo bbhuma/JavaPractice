@@ -4,10 +4,10 @@ public class NextGreatestPermutation {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] arr = { 1, 2, 3, 6, 5, 4 };
+		int[] arr = {769, 533};
 		int[] nextGreatestPermutation = nextGreatestPermutation(arr); // 1 2 4 3 5 6
-		nextGreatestPermutation = nextGreatestPermutation(arr); // 1 2 4 3 6 5
-		nextGreatestPermutation = nextGreatestPermutation(arr); //1 2 4 5 3 6 
+		//nextGreatestPermutation = nextGreatestPermutation(arr); // 1 2 4 3 6 5
+		//nextGreatestPermutation = nextGreatestPermutation(arr); //1 2 4 5 3 6 
 		//nextGreatestPermutation = nextGreatestPermutationPractice(arr); // 6 1 4 3 2 5
 		for (int x : nextGreatestPermutation) {
 			System.out.print(x + " ");
@@ -29,7 +29,7 @@ public class NextGreatestPermutation {
 				}
 			}
 		}
-		return null;
+		return arr;
 	}
 
 	private static int[] reverse(int[] arr, int i, int j) {
