@@ -1,13 +1,32 @@
+
+
 # Maven
 target/
+*.jar
+*.war
+*.ear
 
 # Eclipse / STS
-.classpath
-.project
-.settings/
 .metadata/
 bin/
+.settings/
+.classpath
+.project
 
-# OS
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+
+
+# VS Code
+.vscode/
+
+# OS files
 .DS_Store
 Thumbs.db
+
+# Logs
+*.log
+
+

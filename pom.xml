@@ -8,8 +8,10 @@
     <groupId>ScalerJavaPractice</groupId>
     <artifactId>ScalerJavaPractice</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>ScalerJavaPractice</name>
-    <description>ScalerJavaPractice</description>
+    <packaging>jar</packaging>
+
+    <name>JavaPractice</name>
+    <description>JavaPractice</description>
 
     <properties>
         <java.version>17</java.version>
