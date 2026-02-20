@@ -1,6 +1,6 @@
 package com.java.JavaRefresherIntermediate.Sessionn31.LabSession;
 
-public class SubarraysWithOR1 {
+public class SubarraysWithAND1 {
 
 	public static void main(String[] args) {
 		int[] arr = {0,0,0,0,1,1,0,1,0,1,0,0};
@@ -11,20 +11,20 @@ public class SubarraysWithOR1 {
 	public static int subarraysWithOR1(int[] arr) {
 		int n = arr.length;
 		int totalSubArrays = n * (n + 1) / 2;
-		int zeroSubArr = 0;
+		int oneSubArr = 0;
 		int count = 0;
 		for (int i = 0; i < n; i++) {
-			if (arr[i] == 0) {
+			if (arr[i] == 1) {
 				count++;
 			} else { //when we find one, update zeroSubs and make count = 0 again. 
-				zeroSubArr = zeroSubArr + (count* (count+1)/2); // Only adding when you find 1, so one last zero block is left not added. 
+				oneSubArr = oneSubArr + (count* (count+1)/2); // Only adding when you find 1, so one last zero block is left not added. 
 				count = 0;
 			}
 		}
 		// add last zero block if any
-		zeroSubArr += count* (count+1)/2;
+		oneSubArr += count* (count+1)/2;
 		
-		return totalSubArrays - zeroSubArr;
+		return oneSubArr;
 	}
 
 }
