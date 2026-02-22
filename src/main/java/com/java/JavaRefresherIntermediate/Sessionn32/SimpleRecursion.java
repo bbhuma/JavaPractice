@@ -3,8 +3,15 @@ package com.java.JavaRefresherIntermediate.Sessionn32;
 public class SimpleRecursion {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		System.out.println(foo(3,5));
 	}
-
+	public static int foo(int x, int y) {
+		if(y==0) return 1;
+		return bar(x, foo(x,y-1));
+	}
+	public static int bar(int x, int y) {
+		if(y==0) return 0;
+		return (x + bar(x,y-1));
+	}
+	
 }
