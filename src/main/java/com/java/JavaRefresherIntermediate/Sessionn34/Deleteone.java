@@ -12,14 +12,14 @@ public class Deleteone {
 		int[] prefixGCD = prefixGCD(arr);
 		int[] suffixGCD = suffixGCD(arr);
 		int maxGCD = 0;
-		for (int i = 1; i < arr.length-1; i++) {
+		for (int i = 0; i < arr.length; i++) {
 			int gcd = 0;
-			if(i==0) maxGCD = suffixGCD[1];
-			else if(i==arr.length-1) maxGCD = prefixGCD[arr.length-2];
+			if(i==0) gcd = suffixGCD[1];
+			else if(i==arr.length-1) gcd = prefixGCD[arr.length-2];
 			else {
 			gcd = gcd(prefixGCD[i - 1], suffixGCD[i + 1]);
-			maxGCD = Math.max(maxGCD, gcd);
 			}
+			maxGCD = Math.max(maxGCD, gcd);
 		}
 		return maxGCD;
 	}
@@ -41,6 +41,11 @@ public class Deleteone {
 		}
 		return prefixGCD;
 	}
+	public static int gcd(int gcd, int i) {
+		if (gcd == 0) return i; // if gcd is 0, then we can take the first element as the gcd, and then compare it with the rest of the elements
+		if (i == 0) return gcd; // if i is 0, then we can take the gcd as the gcd, and then compare it with the rest of the elements
+		return gcd(i, gcd % i); // we are using the Euclidean algorithm to find the gcd of two numbers, which is based on the principle that the gcd of two numbers also divides their difference
+	}
 
 	public static int DeleteoneToMaxGCDArrayBruteForce(int[] arr) {
 		int maxGCD = 0;
@@ -60,10 +65,6 @@ public class Deleteone {
 		}
 		return gcd;
 	}
-	public static int gcd(int gcd, int i) {
-		if (gcd == 0) return i; // if gcd is 0, then we can take the first element as the gcd, and then compare it with the rest of the elements
-		if (i == 0) return gcd; // if i is 0, then we can take the gcd as the gcd, and then compare it with the rest of the elements
-		return gcd(i, gcd % i); // we are using the Euclidean algorithm to find the gcd of two numbers, which is based on the principle that the gcd of two numbers also divides their difference
-	}
+	
 
 }
