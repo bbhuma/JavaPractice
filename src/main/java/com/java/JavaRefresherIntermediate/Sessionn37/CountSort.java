@@ -37,7 +37,7 @@ public class CountSort {
 
         for (int i = 0; i < count.length; i++) {
 
-            while (count[i] > 0) {
+            while (count[i] > 0) {		
                 arr[index] = i;
                 index++;
                 count[i]--;
