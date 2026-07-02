@@ -1,7 +1,7 @@
 package com.java.JavaRefresherIntermediate.Sessionn39;
 
-public class KthSmallestElement {
-	public static int kthSmallestElement(final int[] A,int B) {
+public class SearchForARange {
+	public static int searchForARange(final int[] A,int B) {
 		
 		return 0;
 	}
