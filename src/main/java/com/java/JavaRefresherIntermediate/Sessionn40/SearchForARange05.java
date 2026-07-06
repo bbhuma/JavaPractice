@@ -1,4 +1,4 @@
-package com.java.JavaRefresherIntermediate.Sessionn39;
+package com.java.JavaRefresherIntermediate.Sessionn40;
 
 import java.util.Arrays;
 
@@ -27,7 +27,7 @@ public class SearchForARange05 {
 	        int mid = low + (high - low) / 2;
 	        
 	        if (arr[mid] == target) {
-	            ans = mid;
+	            ans = mid;   		 // store ans, keep moving to left
 	            high = mid - 1;      // continue searching left
 	        } else if (arr[mid] < target) {
 	            low = mid + 1;

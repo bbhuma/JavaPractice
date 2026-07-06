@@ -1,4 +1,4 @@
-package com.java.JavaRefresherIntermediate.Sessionn39;
+package com.java.JavaRefresherIntermediate.Sessionn40;
 
 public class NormalBinarySearch01 {
 
